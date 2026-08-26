@@ -28,7 +28,7 @@ public class Personaje : Entidad
 
         if (Input.GetMouseButtonDown(0))
         {
-            Atacar();
+            
         }
     }
 
@@ -48,11 +48,7 @@ public class Personaje : Entidad
         }
     }
 
-    public override void Atacar()
-    {
-        Debug.Log($"{nombre} ataca con {dano} de daño.");
-        // Aquí iría la lógica de detección de enemigos cercanos, animación, etc.
-    }
+
 
     public void GanarExperiencia(float cantidad)
     {

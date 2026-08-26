@@ -4,19 +4,19 @@ using UnityEngine;
 /// Clase base abstracta para todo elemento del juego que tenga vida y pueda atacar/recibir daño.
 /// Personaje y Enemigo heredan de esta clase.
 /// </summary>
-public abstract class Entidad : MonoBehaviour
+public class Entidad : MonoBehaviour
 {
     [Header("Atributos base")]
     [SerializeField] protected string nombre;
     [SerializeField] protected float vida;
-    [SerializeField] protected float dano;
+    [SerializeField] protected float daño;
 
     protected float vidaMaxima;
 
     // Propiedades públicas de solo lectura para que otras clases consulten el estado
     public string Nombre => nombre;
     public float Vida => vida;
-    public float Dano => dano;
+    public float Daño => daño;
     public bool EstaVivo => vida > 0f;
 
     protected virtual void Awake()
@@ -45,7 +45,7 @@ public abstract class Entidad : MonoBehaviour
     /// Comportamiento de ataque genérico. Cada clase hija debe implementarlo
     /// según su propia lógica (Personaje ataca manualmente, Enemigo ataca al perseguir, etc).
     /// </summary>
-    public abstract void Atacar();
+  
     
 
     /// <summary>

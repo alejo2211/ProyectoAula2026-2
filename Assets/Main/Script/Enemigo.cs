@@ -22,7 +22,7 @@ public class Enemigo : Entidad
         float distanciaActual = Vector3.Distance(transform.position, objetivo.position);
         if (distanciaActual <= distancia)
         {
-            Atacar();
+            
         }
     }
 
@@ -33,16 +33,7 @@ public class Enemigo : Entidad
     }
 
     // Sobrescribe el ataque genérico de Entidad con lógica propia de Enemigo
-    public override void Atacar()
-    {
-        Debug.Log($"{nombre} ataca a {objetivo.name} con {dano} de daño.");
 
-        // Ejemplo de asociación: el enemigo puede activar una trampa cercana
-        if (trampaAsociada != null)
-        {
-            trampaAsociada.Activar();
-        }
-    }
 
     public void AsignarObjetivo(Transform nuevoObjetivo)
     {
